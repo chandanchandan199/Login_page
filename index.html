@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>SFITY</title>
+	<meta charset="UTF-8">
+	<meta name="google-signin-client_id" content="628525681297-89vcbq85uaj00khu8et38c9hbgbnuvlk.apps.googleusercontent.com">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700,800&display=swap" rel="stylesheet">
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="style.css">
+
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-app.js"></script>
+
+  <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+  <script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-analytics.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-auth.js"></script>
+  <script src="https://apis.google.com/js/platform.js" async defer></script>
+  <script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-database.js"></script>
+  <script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
+  <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
+</head>
+<body>
+ <div class ="wrapper">
+            
+            <div class="box">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+
+
+            </div>                
+            </div>
+  <div class="cont">
+    <div class="form sign-in">
+      <h2>Sign In</h2>
+      <label>
+        <span>Email Address</span>
+        <input id="signinEmail" type="email" name="email" required>
+      </label>
+      <label>
+        <span>Password</span>
+        <input id="signinPassword" type="password" name="password" required>
+      </label>
+      <button id="SignInBt" class="submit" type="button">Sign In</button>
+      <p class="forgot-pass">Forgot Password ?</p>
+
+      <div class="social-media">
+        <ul>
+          <li><img src="images/facebook.png"></li>
+          <li><img src="images/google_sm.png"></li>
+        
+          
+          <!-- <li><img src="images/twitter.png"></li> -->
+          <!-- <li><img src="images/linkedin.png"></li> -->
+          <!-- <li><img src="images/instagram.png"></li> -->
+        </ul>
+      </div>
+    </div>
+    <div class="sub-cont">
+      <div class="img">
+        <div class="img-text m-up">
+          <h2>New here?</h2>
+          <p>Sign up and discover great amount of new opportunities!</p>
+        </div>
+        <div class="img-text m-in">
+          <h2>One of us?</h2>
+          <p>If you already has an account, just sign in. We've missed you!</p>
+        </div>
+        <div class="img-btn">
+          <span class="m-up">Sign Up</span>
+          <span class="m-in">Sign In</span>
+        </div>
+      </div>
+      <div class="form sign-up">
+        <h2>Sign Up</h2>
+        <label>
+          <span>Name</span>
+          <input id="SignUpName" type="text" required>
+        </label>
+        <label>
+          <span>Email</span>
+          <input id="SignUpMail" type="email" required>
+        </label>
+        <label>
+          <span>Password</span>
+          <input id="SignUpPass" type="password" required>
+        </label>
+        <label>
+          <span>Confirm Password</span>
+          <input id="SignUpCPass" type="password" required>
+        </label>
+        <button id="SignUpBt"  type="button" class="submit">Sign Up Now</button>
+      
+      </div>
+    </div>
+  </div>
+
+  <h1>hello <span id="clientName"></span></h1>
+  <script type="text/javascript" src="script.js"></script>
+  <!-- <script>
+    // SIGNIN WITH GOOGLE SIGNIN BUTTON
+    var firebaseConfig = {
+      apiKey: "AIzaSyDM0TSI3G hUQ9gyix_krjTLrXbEJdAFZe4",
+      authDomain: "utube-79726.firebaseapp.com",
+      databaseURL: "https://utube-79726.firebaseio.com",
+      projectId: "utube-79726",
+      storageBucket: "utube-79726.appspot.com",
+      messagingSenderId: "628525681297",
+      appId: "1:62852568s1297:web:b343758cbe1a6cb53d4d30",
+      measurementId: "G-GK6JKD96B7"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    function login(){
+      function newLoginHappened(user){
+        if(user){
+            app(user);
+        }else{
+          var provider = new firebase.auth.GoogleAuthProvider();
+          firebase.auth().signInWithRedirect(provider);
+        }	 
+      }
+      firebase.auth().onAuthStateChanged(newLoginHappened);
+    }
+
+    // SIGNIN WITH FORM
+    firebase.auth().onAuthStateChanged((user) => {
+        if(user) {
+          window.location.href="home.html"
+        }
+    });
+
+    function app(user){
+      // YOURCODE FOR APP CONF
+      document.getElementById("clientName").innerHTML = user.displayName;
+      window.location.href = "home.html";
+    }
+
+    window.onload = UserExistInSession;
+
+    function UserExistInSession() {
+      if (firebase.auth) {
+        window.location.href = "home.html";
+      }
+    }
+    // window.onload = login;
+
+    function signOut() {
+      var auth2 = gapi.auth2.getAuthInstance();
+      auth2.signOut().then(function () {
+        console.log('User signed out.');
+      });
+    }
+  </script> -->
+</body>
+</html>
